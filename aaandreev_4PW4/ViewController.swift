@@ -31,6 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
@@ -44,8 +45,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         if context.hasChanges {
             try? context.save()
         }
-        if let notes = try? context.fetch(Note.fetchRequest()) {
-            self.notes = (notes as? [Note])!
+        if let notes = try? context.fetch(Note.fetchRequest()) as? [Note] {
+            self.notes = notes
         } else {
             self.notes = []
         }
@@ -53,8 +54,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     
     func loadData() {
-        if let notes = try? context.fetch(Note.fetchRequest()) {
-            self.notes = (notes as? [Note])!
+        if let notes = try? context.fetch(Note.fetchRequest()) as? [Note] {
+            self.notes =  notes.sorted(
+                by: { $0.creationDate.compare($1.creationDate) == .orderedDescending})
             } else {
             self.notes = []
         }
@@ -76,12 +78,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return notes.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfLine: CGFloat = 5
-        let cellWidth = UIScreen.main.bounds.size.width
-        let cellHeight = UIScreen.main.bounds.size.height / numberOfLine
-        return CGSize(width: cellWidth, height: cellHeight)
-    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
@@ -90,7 +86,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         ) as! NoteCell
         let note = notes[indexPath.row]
         cell.titleLabel.text = note.title
-        cell.descriptionLabel.text = note.description
+        cell.descriptionLabel.text = note.descriptionText
+        cell.layer.masksToBounds = true
         return cell
     }
 }

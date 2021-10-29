@@ -17,31 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y3M-ge-zdi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y3M-ge-zdi">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sj5-H6-4ZK">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sj5-H6-4ZK">
                                     <size key="itemSize" width="333" height="96"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="30" minY="15" maxX="30" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NoteCell" id="JmA-UR-E8i" customClass="NoteCell" customModule="aaandreev_4PW4" customModuleProvider="target">
-                                        <rect key="frame" x="32.5" y="15" width="349" height="116"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="NoteCell" id="JmA-UR-E8i" customClass="NoteCell" customModule="aaandreev_4PW4" customModuleProvider="target">
+                                        <rect key="frame" x="40.5" y="15" width="333" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Wh-Wj-KEo">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="116"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-Jc-vku">
-                                                    <rect key="frame" x="139.5" y="8" width="70" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="First Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-Jc-vku">
+                                                    <rect key="frame" x="13" y="8" width="307" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYk-aK-7HH">
-                                                    <rect key="frame" x="127" y="67" width="95" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Second Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYk-aK-7HH">
+                                                    <rect key="frame" x="13" y="63" width="307" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -50,20 +50,19 @@
                                             <color key="backgroundColor" red="1" green="0.70392117322972414" blue="0.4026411646903697" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="zF4-Jc-vku" firstAttribute="centerX" secondItem="0Wh-Wj-KEo" secondAttribute="centerX" id="8Ds-zC-USz"/>
-                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="centerX" secondItem="0Wh-Wj-KEo" secondAttribute="centerX" id="D81-Cg-hWk"/>
-                                                <constraint firstAttribute="trailing" secondItem="zF4-Jc-vku" secondAttribute="trailing" constant="139.5" id="Epz-0G-x2G"/>
-                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="leading" secondItem="0Wh-Wj-KEo" secondAttribute="leading" constant="127" id="FQs-CA-ycK"/>
-                                                <constraint firstItem="zF4-Jc-vku" firstAttribute="top" secondItem="0Wh-Wj-KEo" secondAttribute="top" constant="8" id="OEO-dm-Z0g"/>
-                                                <constraint firstAttribute="trailing" secondItem="OYk-aK-7HH" secondAttribute="trailing" constant="127" id="QAx-C6-Mln"/>
-                                                <constraint firstItem="zF4-Jc-vku" firstAttribute="leading" secondItem="0Wh-Wj-KEo" secondAttribute="leading" constant="139.5" id="aeK-YJ-8gD"/>
-                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="top" secondItem="zF4-Jc-vku" secondAttribute="bottom" constant="38" id="t3F-hg-4KQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="OYk-aK-7HH" secondAttribute="bottom" constant="8" id="vE0-Zq-Uv2"/>
+                                                <constraint firstItem="zF4-Jc-vku" firstAttribute="centerX" secondItem="0Wh-Wj-KEo" secondAttribute="centerX" id="2SG-qy-Mz9"/>
+                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="top" secondItem="zF4-Jc-vku" secondAttribute="bottom" constant="34" id="3zP-g4-bxU"/>
+                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="centerX" secondItem="0Wh-Wj-KEo" secondAttribute="centerX" id="5CS-er-l98"/>
+                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="leading" secondItem="0Wh-Wj-KEo" secondAttribute="leadingMargin" constant="5" id="JQw-Xd-Luf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zF4-Jc-vku" secondAttribute="trailing" constant="5" id="UlH-7d-PN9"/>
+                                                <constraint firstItem="zF4-Jc-vku" firstAttribute="leading" secondItem="0Wh-Wj-KEo" secondAttribute="leadingMargin" constant="5" id="Ybx-7K-JmH"/>
+                                                <constraint firstItem="OYk-aK-7HH" firstAttribute="centerX" secondItem="0Wh-Wj-KEo" secondAttribute="centerX" id="rXB-fx-uQi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OYk-aK-7HH" secondAttribute="trailing" constant="5" id="xoW-cj-0sI"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
